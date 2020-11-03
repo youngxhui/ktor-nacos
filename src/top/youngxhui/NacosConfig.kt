@@ -3,8 +3,6 @@ package top.youngxhui
 import com.typesafe.config.ConfigFactory
 import io.ktor.config.*
 import io.ktor.util.*
-import java.util.*
-
 
 /**
  * Create by young on 2020/11/3

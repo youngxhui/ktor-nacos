@@ -8,6 +8,16 @@
 
 ## 如何使用
 
+### 服务端
+
+将服务注册到 nacos 上。
+
+对 application.conf 进行配置，填写 nacos 相关配置。
+
+```conf
+
+```
+
 ```kotlin
 
 ```
