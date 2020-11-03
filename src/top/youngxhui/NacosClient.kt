@@ -5,7 +5,6 @@ import io.ktor.client.*
 import io.ktor.client.features.*
 import io.ktor.client.request.*
 import io.ktor.util.*
-import org.slf4j.LoggerFactory
 
 
 /**
@@ -26,8 +25,6 @@ class NacosClient {
         @KtorExperimentalAPI
         override fun install(feature: NacosClient, scope: HttpClient) {
 
-            val log = LoggerFactory.getLogger(this::class.java)
-
             val nacosConfig = NacosConfig()
             val naming = NamingFactory.createNamingService("${nacosConfig.nacosAddress}:${nacosConfig.nacosPort}")
             scope.requestPipeline.intercept(HttpRequestPipeline.Render) {
@@ -36,7 +33,6 @@ class NacosClient {
                 context.url.host = selectedNode.ip
                 context.url.port = selectedNode.port
                 currentNodeIndex = (currentNodeIndex + 1) % instances.size
-                log.info("Calling ${selectedNode.serviceName}: ${context.url.buildString()}")
             }
         }
 

@@ -42,43 +42,13 @@
             <version>${ktor_version}</version>
         </dependency>
         <dependency>
-            <groupId>ch.qos.logback</groupId>
-            <artifactId>logback-classic</artifactId>
-            <version>${logback_version}</version>
-        </dependency>
-        <!--        "io.ktor:ktor-locations:$ktor_version"-->
-        <dependency>
-            <groupId>io.ktor</groupId>
-            <artifactId>ktor-locations</artifactId>
-            <version>${ktor_version}</version>
-        </dependency>
-        <dependency>
-            <groupId>io.ktor</groupId>
-            <artifactId>ktor-server-tests</artifactId>
-            <version>${ktor_version}</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
             <groupId>com.alibaba.nacos</groupId>
             <artifactId>nacos-client</artifactId>
             <version>${nacos.version}</version>
         </dependency>
-        <!--            implementation "io.ktor:ktor-client-core:$ktor_version"
-            implementation "io.ktor:ktor-client-core-jvm:$ktor_version"
-            implementation "io.ktor:ktor-client-apache:$ktor_version"-->
         <dependency>
             <groupId>io.ktor</groupId>
             <artifactId>ktor-client-core</artifactId>
-            <version>${ktor_version}</version>
-        </dependency>
-        <dependency>
-            <groupId>io.ktor</groupId>
-            <artifactId>ktor-client-core-jvm</artifactId>
-            <version>${ktor_version}</version>
-        </dependency>
-        <dependency>
-            <groupId>io.ktor</groupId>
-            <artifactId>ktor-client-apache</artifactId>
             <version>${ktor_version}</version>
         </dependency>
     </dependencies>

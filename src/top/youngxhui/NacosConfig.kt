@@ -3,7 +3,6 @@ package top.youngxhui
 import com.typesafe.config.ConfigFactory
 import io.ktor.config.*
 import io.ktor.util.*
-import org.slf4j.LoggerFactory
 import java.util.*
 
 
@@ -14,7 +13,6 @@ import java.util.*
 @KtorExperimentalAPI
 class NacosConfig {
 
-    //    val log = LoggerFactory.getLogger(this::class.java)
     private val config = HoconApplicationConfig(ConfigFactory.load())
     private val nacosConfig = config.config("nacos")
     val nacosPort = nacosConfig.propertyOrNull("port")?.getString() ?: "8848"

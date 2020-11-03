@@ -15,13 +15,11 @@ import java.net.InetAddress
 
 class NacosDiscover(configuration: Configuration) {
 
-
     val serverName = configuration.serverName
 
     class Configuration {
         lateinit var serverName: String
     }
-
 
     companion object Feature : ApplicationFeature<ApplicationCallPipeline, Configuration, NacosDiscover> {
         /**
