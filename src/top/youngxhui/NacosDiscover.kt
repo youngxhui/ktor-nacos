@@ -41,7 +41,6 @@ class NacosDiscover(configuration: Configuration) {
             val feature = NacosDiscover(configuration)
             val addr = InetAddress.getLocalHost();
             val serverAddress = addr.hostAddress
-
             // 应用启动时进行
             val naming = NamingFactory.createNamingService("${nacosConfig.nacosAddress}:${nacosConfig.nacosPort}")
             val instance = Instance()

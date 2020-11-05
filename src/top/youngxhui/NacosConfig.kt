@@ -9,7 +9,7 @@ import io.ktor.util.*
  * Copyright © 2020 young. All rights reserved.
  */
 @KtorExperimentalAPI
-class NacosConfig {
+internal class NacosConfig {
 
     private val config = HoconApplicationConfig(ConfigFactory.load())
     private val nacosConfig = config.config("nacos")
